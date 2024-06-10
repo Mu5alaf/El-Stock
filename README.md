@@ -27,6 +27,7 @@ This project is a simplified Order Processing System for an online store. It han
     ```sh
     git clone <[repository_url](https://github.com/Mu5alaf/Order-Processing-System.git)>
     cd <Order-Processing-System>
+    Docker Hub : https://hub.docker.com/r/mu5halaf/store-web
     ```
 
 2. Create a virtual environment and activate it:
