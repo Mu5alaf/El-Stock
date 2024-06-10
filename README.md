@@ -66,13 +66,13 @@ This project is a simplified Order Processing System for an online store. It han
 1. Build the Docker image:
 
     ```sh
-    docker build -t order-processing-system .
+    docker build -t
     ```
 
 2. Run the Docker container:
 
     ```sh
-    docker run -d -p 8000:8000 order-processing-system
+    docker run -d -p 8000:8000 
     ```
 
 ## Usage
