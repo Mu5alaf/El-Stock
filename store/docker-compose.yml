@@ -1,0 +1,18 @@
+#docker-version
+version: '3.8'
+#setup the instruction 
+services:
+  web:
+    build: .
+    # check database schema is always up to date.
+    command: >
+      sh -c "python manage.py migrate &&
+            python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=*_v^o3%*e1x8&5@62+#&vva8e9$t*95^(bo3y3op6&agz5qgj$
+      - ALLOWED_HOSTS=localhost, 

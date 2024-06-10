@@ -1,0 +1,158 @@
+/* Base reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Content container */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.demo-area {
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+
+.demo-trigger {
+    display: block;
+    width: 750px;
+    height: 450px;
+    margin-right: 5%;
+
+}
+
+.demo-trigger img {
+    width:100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.detail {
+    position: relative;
+    width: 100%;
+}
+.section-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.unavailable strong{
+    color: red !important;
+}
+.detail h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.detail strong {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #196802;
+}
+
+.detail p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Availability h6  {
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: lightblue;
+    width:120px;
+    border-radius: 10px;
+    text-align: center;
+}
+.Availability{
+    display: flex;
+    flex-direction: row;
+    gap: 10px ;
+}
+
+.detail ul {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.detail h4 {
+    font-size: 1.5em;
+    color: #e67e22;
+    margin-top: 10px;
+}
+
+.detail button {
+    vertical-align: middle;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.detail button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .demo-trigger {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .detail {
+        width: 100%;
+    }
+
+    .detail button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail h3 {
+        font-size: 1.5em;
+    }
+
+    .detail h4 {
+        font-size: 1.2em;
+    }
+}
+
+.add_button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}

@@ -1,0 +1,82 @@
+/* Basic styles for the cart page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+
+    
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    padding-top: 15px;
+
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #ffa600;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #000000;
+}
+
+th {
+    font-weight: bold;
+}
+
+th {
+    font-weight: bold;
+}
+
+td img {
+    max-width: 100px;
+    height: auto;
+}
+
+strong {
+    font-size: 1.2em;
+}
+
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+.svg_empty {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.svg_empty svg{
+    width: 30%;
+    padding: 30px;
+}
+h2{
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.check_out_btn{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+}

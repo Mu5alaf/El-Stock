@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images\favicon.ico' %}"/>
+    <title>Unauthorized</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>401</h1>
+    <p>Unauthorized access.</p>
+    <p>You do not have permission to view this page.</p>
+    <p><a href="{% url 'login' %}">Login</a></p>
+</body>
+</html>

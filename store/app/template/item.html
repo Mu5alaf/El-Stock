@@ -1,0 +1,56 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block head %}
+<title>Item</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/item.css' %}">
+{% endblock %}
+
+{% block header %}
+<nav class="header-navigation">
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}" class="link-button">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}" class="link-button">Login</a>
+    {% endif %}
+    <a href="{% url 'cart' %}" class="link-button">My Cart<i class="fa-solid fa-cart-shopping"></i></a>
+    <a href="{% url 'home' %}" class="link-button" id="button-2">Back home<i class="fa-solid fa-house"></i></a>
+</nav>
+{% endblock %}
+{% block messages %}{% endblock %}
+{% block main %}
+{% for item in product %}
+<section class="content">
+    <div class="demo-area">
+        <img class="demo-trigger" src="{{item.image.url}}" alt="{{item.name}}">
+        <div class="detail">
+            <section class="section-details">
+                <h3>{{item.name}}</h3>
+                <p>Specifications:</p>
+                <ul>
+                    <li>{{item.description}}</li>
+                </ul>
+                <h4>{{item.price}} EGP</h4>
+                <div class="Availability">
+                    {% if item.is_available %}
+                    <h6><strong>{{item.status}}</strong></h6>
+                    <h6><strong>{{item.stock}}</strong> In Stock </h6>
+                    {% else %}
+                    <h6 class="unavailable"><strong>{{item.status}}</strong></h6>
+                    <h6 class="unavailable"><strong>{{item.stock}}</strong> In Stock </h6>
+                    {% endif %}
+                </div>
+                <h6>
+                    <form action="{% url 'add_cart' item.pk %}" method="POST" class="add_button">
+                        {% csrf_token %}
+                        <input class="form-control text-center"  type="number" name="quantity" min="1" max="{{ product.stock }}" placeholder="Quantity" required/>
+                        <button type="submit">Add to cart</button>
+                    </form>
+                </h6>
+            </section>
+        </div>
+    </div>
+</section>
+{% endfor %}
+{% endblock %}
+{% block footer %}{% endblock %}

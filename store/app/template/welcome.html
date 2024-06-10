@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML configuration -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images\favicon.ico' %}"/>
+    <title>El-Stock</title>
+</head>
+<body>
+    <div class="bouncing-blobs-container">
+        <div class="bouncing-blobs-glass"></div>
+        <div class="bouncing-blobs">
+            <div class="bouncing-blob bouncing-blob--orange"></div>
+        </div>
+    </div>
+    <div class="hero">
+        <h3>Welcome To El-Stock</h3>
+        <p>El-Stock is the premier destination for all items that you needs.</p>
+        <div class="tutorial-link">
+            <a href="{%url 'home' %}" rel="home-url">Go to Store</a>
+        </div>
+    </div>
+</body>
+</html>
