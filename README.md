@@ -97,3 +97,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'your_email@example.com'
 EMAIL_HOST_PASSWORD = 'your_email_password'
+```
+## Diagram
+![online store drawio](https://github.com/Mu5alaf/El-Stock/assets/109148687/4f724c1a-b291-4a82-b376-e981bd640484)
